@@ -1,6 +1,6 @@
 # Project 3: 
 
-Our company is developing a website with easy booking system to provide a one-stop grooming place catering to men with services that include haircut, facial and massage as there seems to be a lack of such places for men to relax.
+Our company is developing a website with easy booking system catering to men with services that include massage, facial and haircut at one place, offering the convenience and relaxation which they want in their life.
 
 Live Version:
 
