@@ -1,32 +1,31 @@
-<div class="row">
+<div class="container" id="login-form">
   
-    <form class="col s12" action="/pages/login" method="POST">
+  <form class="col s12" action="/pages/login" method="post">
+    <h3 class="login"><h3>Login</h3>
       <div class="row">
-        <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
-        </div>
-
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" placeholder="Email Address">
         </div>
       </div>
- 
-      <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate">
-            <label for="email">Email</label>
-          </div>
-        </div>
+
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
+          <input id="password" type="password" class="validate" placeholder="Password">
         </div>
       </div>
+
     
-  
+      <div class="login-space">
+        <a href="/pages/forgot">Forgot Password?</a><br/>
+      </div>
+
+      <div>
+        <p>Don't have an account?<br/><a href="/pages/signup">Sign Up</a></p>
+      </div>
+
+      <p class="full">
+        <button>Submit</button>
+      </p>
     </form>
   </div>
