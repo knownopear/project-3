@@ -2,41 +2,32 @@ class PagesController < ApplicationController
   def home
     # render 'pages/root'
   end
-end
-
+# end
 
   def about
-
-
   end
-end
-
-
+# end
 
   def bookservices
-
-
   end
-end
+# end
 
 
   def login
-
-
   end
-end
+# end
 
 
   def signup
-
-
   end
 end
+#
+#
+# root 'pages#home' # get '/'
+#
+# get '/about', to: 'pages#about'
+# get '/bookservices', to: 'pages#bookservices'
+# get '/login', to: 'pages#login'
+# get '/signup', to: 'pages#signup'
 
-
-root 'pages#home' # get '/' 
-
-get '/about', to: 'pages#about'
-get '/bookservices', to: 'pages#bookservices'
-get '/login', to: 'pages#login'
-get '/signup', to: 'pages#signup'
+#I uncommented everything that was making this not work. When you have time, delete as you see fit. -Speed

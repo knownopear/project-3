@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project3</title>
+    <title>Spa || Project 3</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
   </head>
 
   <body>
+    <!-- Nav bar -->
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Book Now</a></li>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+    </nav>
 
 
-
-
-
-
-    
     <%= yield %>
+
+    <!-- Footer -->
+    <footer class="page-footer teal">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">title</h5>
+              <p class="grey-text text-lighten-4">hello</p>
+            </div>
+            
+            <div class="col l3 s12">
+              <h5 class="white-text">Contact Us</h5>
+              <ul>
+                <li><a class="white-text" href="#!">asdf</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <div class="container">
+          Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+          </div>
+        </div>
+    </footer>
   </body>
 </html>
+
+<!--
+This is the main layout file
+Probably for nav bar and footer
+-->
