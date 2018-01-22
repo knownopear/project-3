@@ -18,7 +18,7 @@
 //= require jquery_ujs
 //= require materialize
 
-$(document).ready(function(){
-    $('.parallax').parallax();
-    console.log('123');
+$(document).on('turbolinks:load', function() {
+  $('.parallax').parallax();
+  console.log('123');
 });
