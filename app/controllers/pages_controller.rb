@@ -1,8 +1,9 @@
 class PagesController < ApplicationController
+
   def home
     # render 'pages/root'
   end
-  
+
   def about
   end
 
@@ -12,7 +13,12 @@ class PagesController < ApplicationController
   def login
   end
 
-
   def signup
+  end
+
+  def edit
+  end
+
+  def delete
   end
 end
