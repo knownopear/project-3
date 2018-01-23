@@ -9,12 +9,11 @@ Live Version:
 
 ### User Stories
 
-![user stories](https://user-images.githubusercontent.com/31798170/35189972-805ec708-fe91-11e7-8ab8-50c74ccaabeb.png)
 
 ### Entity-Relationship Diagram
 
 ### Flowchart
-![flowchart](https://user-images.githubusercontent.com/31798170/35189967-717941be-fe91-11e7-8348-c036e38f75cb.png)
+
 
 ### Wireframe
 
