@@ -18,9 +18,39 @@ RSpec.describe PagesController, type: :controller do
   end
 
 
-  describe "GET #services" do
+  describe "GET #massage" do
     it "returns http success" do
-      get :services
+      get :massage
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+
+  describe "GET #facial" do
+    it "returns http success" do
+      get :facial
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET #hair" do
+    it "returns http success" do
+      get :hair
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET #shave" do
+    it "returns http success" do
+      get :shave
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+
+  describe "GET #edit" do
+    it "returns http success" do
+      get :edit
       expect(response).to have_http_status(:success)
     end
   end

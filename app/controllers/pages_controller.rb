@@ -7,7 +7,16 @@ class PagesController < ApplicationController
   def about
   end
 
-  def bookservices
+  def massage
+  end
+
+  def facial
+  end
+
+  def hair
+  end
+
+  def shave
   end
 
   def login
