@@ -17,23 +17,32 @@
     <!-- Nav bar -->
     <nav class="white" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">Logo</a>
+        <a id="logo-container" href="/" class="brand-logo">Logo</a>
         <ul class="right hide-on-med-and-down">
           <li><%= link_to "About", about_path, class: "nav-link" %></li>
           <li><%= link_to "Login", login_path, class: "nav-link" %></li>
           <li><%= link_to "Signup", signup_path, class: "nav-link" %></li>
         </ul>
-    </nav>
 
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i>Hi</a>
+  </nav>
+
+    <!-- <div>
+      <ul class="icons" id="social-icons">
+        <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+        <a href="https://twitter.com" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com" class="fa fa-instagram"></a>
+      </ul>
+    </div> -->
+
+
+
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
     <!-- Slideout bar -->
     <ul id="slide-out" class="side-nav">
        <li><div class="user-view">
-         <div class="background">
-           <img src="images/bg_about.jpg">
-         </div>
-         <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+
          <a href="#!name"><span class="white-text name">John Doe</span></a>
          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
        </div></li>
@@ -49,35 +58,14 @@
     <%= yield %>
 
 
+<footer>
+  <div class="footer-copyright">
+    <div class="container">
+      <a href="https://github.com/emjys/project-3"><strong>MennStop</strong></a>&nbsp&copy 2017 &nbsp | &nbsp All Rights Reserved &nbsp | &nbsp
+      <a href="/" class="page-scroll">Top<span class="fa fa-angle-up"></span></a></a>
+    </div>
+  </div>
+</footer>
 
-    <!-- Footer -->
-    <footer class="page-footer teal">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">title</h5>
-              <p class="grey-text text-lighten-4">hello</p>
-            </div>
-
-            <div class="col l3 s12">
-              <h5 class="white-text">Contact Us</h5>
-              <ul>
-                <li><a class="white-text" href="#!">asdf</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-copyright">
-          <div class="container">
-          Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-          </div>
-        </div>
-    </footer>
-  </body>
+</body>
 </html>
-
-<!--
-This is the main layout file
-Probably for nav bar and footer
--->

@@ -57,3 +57,6 @@ gem 'materialize-sass'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'devise'
+gem 'faker'
+gem 'populator'
+
