@@ -9,19 +9,17 @@
 
 
 # Therapist Name
-10.times do |index|
-  Therapist.create(
-    name: Faker::OnePiece.character
-  )
-end
+# 10.times do |index|
+#   Therapist.create(
+#     name: Faker::OnePiece.character
+#   )
+# end
 
-## Service & Types
-10.times do |index|
-  Service.create(
-    service_type: index+1,
-    name: Faker::Ancient.god,
-    description: Faker::Science.element,
-    price: Faker::Number.decimal(2),
-      therapist_id: Therapist.find(index+1).id
-  )
-end
+# Service & Types
+Service.create(
+  service_type: 1,
+  name: "Signature Massage",
+  description: "Rejuvenate your body from head to toe. Includes a refreshing scalp massage, face acupressure and tension-taming foot massage.",
+  price: 180.00,
+  therapist_id: Therapist.find(1).id
+)
