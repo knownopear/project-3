@@ -21,8 +21,9 @@
 $(document).on('turbolinks:load', function() {
   $('.parallax').parallax();
   $('ul.tabs').tabs();
+  $('select').material_select();
 
-  $('.button-collapse').sideNav({
+  $('.activate-side').sideNav({
     menuWidth: 300, // Default is 300
     edge: 'right', // Choose the horizontal origin
     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor

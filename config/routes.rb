@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
 
-  devise_for :users
   root 'pages#home'
-  
-    get '/about', to: 'pages#about'
-    get '/massage', to: 'pages#massage'
-    get '/facial', to: 'pages#facial'
-    get '/hair', to: 'pages#hair'
-    get '/shave', to: 'pages#shave'
-    get '/login', to: 'pages#login'
-    get '/signup', to: 'pages#signup'
-    get '/edit', to: 'pages#edit'
+  get '/about', to: 'pages#about'
+
+
+  devise_for :users,
+  path: '',
+  path_names: {
+   sign_in: 'login',
+   sign_out: 'logout',
+   password: 'secret',
+   registration: 'register',
+   # can change to registration: 'signup', <= to change the routes
+   sign_up: ''
+  }
+
 end
 
 

@@ -1,0 +1,32 @@
+<div>
+<h2>Services</h2>
+    <% @all_services.each do |service| %>
+        <p><%= service.name %></p> <br>
+        <p><%= service.description %></p> <br>
+        <p><%= service.price %></p> <br>
+        <p><%= link_to "Show", book %></p> <br>
+        <!-- <p><%= link_to "Destroy", book, method: :delete, data: { confirm: "Are you sure?" } %></p> -->
+    <% end %>
+</div>
+
+
+<table class="highlight striped">
+  <thead>
+    <tr>
+        <th>Service</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Select</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @all_services.each do |service| %>
+    <tr>
+      <td><%= service.name %></td>
+      <td><%= service.description %></td>
+      <td><%= service.price %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
