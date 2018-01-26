@@ -8,14 +8,14 @@
 
 
 
-# Therapist Name
+# Therapist Names
 10.times do |index|
   Therapist.create(
     name: Faker::OnePiece.character
   )
 end
 
-## Service & Types
+## Services & Types
 10.times do |index|
   Service.create(
     service_type: index+1,
