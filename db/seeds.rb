@@ -22,6 +22,7 @@ end
     name: Faker::Ancient.god,
     description: Faker::Science.element,
     price: Faker::Number.decimal(2),
-      therapist_id: Therapist.find(index+1).id
+    therapist_id: Therapist.find(index+1).id,
+    slots_taken: 2
   )
 end

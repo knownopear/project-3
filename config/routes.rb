@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  root 'pages#home'
-  get '/about', to: 'pages#about'
+  root 'bookings#home'
+  get '/about', to: 'bookings#about'
 
+  resource :bookings
 
   devise_for :users,
   path: '',

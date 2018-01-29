@@ -4,7 +4,8 @@ class CreateBookings < ActiveRecord::Migration[5.1]
       t.references :user
       t.references :service
       t.date :date
-      t.time :time
+      t.integer :time
+      t.string :reference_number
 
       t.timestamps
     end

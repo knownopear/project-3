@@ -5,6 +5,7 @@ class CreateServices < ActiveRecord::Migration[5.1]
       t.string :description
       t.string :name
       t.float :price
+      t.integer :slots_taken
       t.references :therapist
 
       t.timestamps

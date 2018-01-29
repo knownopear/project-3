@@ -19,18 +19,48 @@
 //= require materialize
 
 $(document).on('turbolinks:load', function() {
+  
+  // ########## MATERIALIZE FUNCTIONS ########## //
   $('.parallax').parallax();
   $('ul.tabs').tabs();
   $('select').material_select();
-
+  
   $('.activate-side').sideNav({
     menuWidth: 300, // Default is 300
     edge: 'right', // Choose the horizontal origin
     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
     draggable: true, // Choose whether you can drag to open on touch screens,
   });
-
-$(document).ready(function() {
-  $('select').material_select();
+  
+  $('.datepicker').pickadate({
+    min: true,
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: true, // Close upon selecting a date,
+    onSet: function(date) {
+        console.log(new Date(date.select));
+    }
   });
+  
+  $('.time_selector').dropdown({
+    // Forces drop-up menu, remove if not required
+      belowOrigin: true
+    }
+  );
+  
+  // ########## OTHER FUNCTIONS ########## //
+
+  // $(".service_checkbox").change(function(){
+  //   if(this.checked) {
+  //     console.log("This is checked");
+  // 
+  //   }
+  //   else if (!this.checked) {
+  //     console.log("This is unchecked");
+  //   }
+  // });
+  
 });
