@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
   root 'pages#home'
-  get '/about', to: 'pages#about'
-
+  get '/about', to: 'pages#home'
 
   devise_for :users,
   path: '',

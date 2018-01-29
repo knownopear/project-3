@@ -3,59 +3,186 @@
     <div class="container">
       <div class="row center">
 
+        <div class="parallax">
+          <%= image_tag( root_url + "images/abstract.png") %>
+        </div>
+
+
+<!-- ################# Select Timing & Therapist ################# -->
+<div id="selection">
+  <div class="input-field col s12 m6 white">
+    <select class="icons">
+      <option value="" disabled selected>Choose Your Therapist</option>
+        <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
+        <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
+        <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
+    </select>
+  </div>
+
+
+    <div class="input-field col s12 m6 white">
+      <select class="icons">
+        <option value="" disabled selected>Choose Your Timing</option>
+        <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
+        <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
+        <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
+        </select>
+    </div>
+
+
 <!-- ################# Services ################# -->
-        <table class="highlight bordered teal lighten-2">
-          <thead>
-            <tr>
-              <th>Service Name</th>
-              <th>Description</th>
-              <th>Price</th>
-              <th>Therapist</th>
-              <th>Select</th>
-            </tr>
-          </thead>
+    <table class="highlight bordered white" id="table">
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th class="description">Description</th>
+          <th class="price">Price</th>
+          <th>Therapist</th>
+          <th>Select</th>
+        </tr>
+      </thead>
 
-          <tbody>
-            <% @all_services.each do |service| %>
-            <tr>
-              <td><%= service.name %></td>
-              <td><%= service.description %></td>
-              <td><%= service.price %></td>
-              <td><%= service.therapist.name %></td>
-              <td>
-                <input type="checkbox" id="<%= service.id %>" />
-                <label for="<%= service.id %>">Select</label>
-              </td>
-            </tr>
-            <% end %>
-          </tbody>
-        </table>
-<!-- ################# End Services ################# -->
-        <div>
-          <div class="input-field col s12 m6 teal">
-            <select class="icons">
-              <option value="" disabled selected>Choose Your Therapist</option>
-              <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
-              <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
-              <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
-            </select>
+      <tbody>
+        <% @all_services.each do |service| %>
+          <tr>
+            <td>
+              <%= service.name %>
+            </td>
+            <td>
+              <%= service.description %>
+            </td>
+            <td>
+              <%= service.price %>
+            </td>
+            <td>
+              <%= service.therapist.name %>
+            </td>
+            <td>
+              <input type="checkbox" id="<%= service.id %>" />
+              <label for="<%= service.id %>"></label>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+          <div class="submit-btn">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+            </button>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-          <div class="input-field col s12 m6 teal">
-            <select class="icons">
-              <option value="" disabled selected>Choose Your Timing</option>
-              <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
-              <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
-              <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
-            </select>
+</div>
+</div>
+</div>
+
+
+<!-- ################# About ################# -->
+
+<div class="container-about">
+  <h5 id="about">About Us</h5>
+
+<div class="container">
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="icon-block">
+        <h4 class="center brown-text">
+          <i class="material-icons">airline_seat_recline_extra</i>
+        </h4>
+        <h6 class="center">Catered For You</h6>
+      </div>
+    </div>
+
+
+    <div class="col s12 m4">
+      <div class="icon-block">
+        <h4 class="center brown-text">
+          <i class="material-icons">alarm_off</i>
+        </h4>
+        <h6 class="center">No Interruptions</h6>
+      </div>
+    </div>
+
+
+    <div class="col s12 m4">
+      <div class="icon-block">
+        <h4 class="center brown-text">
+          <i class="material-icons">mood</i>
+        </h4>
+        <h6 class="center">Fuss Free</h6>
+      </div>
+    </div>
+
+
+    <div class="about-container">
+      <div class="col s12" >
+        <div class="col s12 m4 l3">
+          <%= image_tag( root_url + "images/aroma.png", size: "300x200") -%>
+        </div>
+
+        <div class="col s12 m4 l3">
+          <%= image_tag( root_url + "images/massage.png", size: "300x200") -%>
+        </div>
+
+        <div class="col s12 m4 l3">
+          <%= image_tag( root_url + "images/hair.png", size: "300x200") -%>
+        </div>
+
+        <div class="col s12 m4 l3">
+          <%= image_tag( root_url + "images/shave.png", size: "300x200") -%>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m6 l3" id="about-pic2"></div>
+          <%= image_tag( root_url + "images/place.png", size: "1350x300") -%>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- ################# Contact Us################# -->
+
+    <div class="container-contact">
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="contact-info">
+            <p>
+              <a href="mailto:someone@example.com">email</a>
+            </p>
+            <p>+65 6789 1230</p>
+            <p>Oat Road</p>
           </div>
+        </div>
 
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-            <i class="material-icons right">send</i>
-          </button>
+  <div class="row">
+        <div class="col s12 m6">
+          <form method="post" action="/contactus">
+            <h5>Contact Us</h5>
+            <div>
+              <input type="text" class="text" name="name" placeholder="Name">
+            </div>
+
+            <div>
+              <input type="email" class="text" name="email" placeholder="Email">
+            </div>
+
+            <div>
+              <input type="tel" class="phone" name="email" placeholder="Phone">
+            </div>
+
+            <div class="row-message">
+              <textarea name="message" placeholder="Message"></textarea>
+            </div>
+            <br/>
+            <input type="submit" name="send" value="Send">
+            <br/>
+          </form>
 
         </div>
       </div>
     </div>
   </div>
-</div>
