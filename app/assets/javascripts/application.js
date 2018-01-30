@@ -19,7 +19,7 @@
 //= require materialize
 
 $(document).on('turbolinks:load', function() {
-  
+  var selected_date;
   // ########## MATERIALIZE FUNCTIONS ########## //
   $('.parallax').parallax();
   $('ul.tabs').tabs();
@@ -41,7 +41,9 @@ $(document).on('turbolinks:load', function() {
     close: 'Ok',
     closeOnSelect: true, // Close upon selecting a date,
     onSet: function(date) {
-      console.log(new Date(date.select));
+      selected_date = (new Date(date.select).toISOString().slice(0, -14));
+      // Uncaught range error because onset detects all selections within pickadate interface, so if you click next month 
+      // there is no 'date' that you've selected, hence you cant run all the following functions
     }
   });
   
@@ -51,23 +53,24 @@ $(document).on('turbolinks:load', function() {
   }
 );
 
-$('.time_selector').change(function() {
-  // console.log($('#booking_time').val());
+$('.time_selector').change(function() {  
+  parsedData = {time : $('#booking_time').val(), date : selected_date}
+  // console.log(passedData);
   
   $.ajax({
     url: '/bookings',
     type: 'post',
-    data: $('#booking_time').val(),
-    success: function(data) { // console.log(data); // data is @matched_booking_by_time obj, manipulate the data
+    data: parsedData,
+    success: function(data) { // console.log(data); // data is @matched_booking (time = selected time, date = selected date)
+      // console.log(data);
+      $('.service_checkbox').prop( "disabled", false );
       
-      var yolo82 = JSON.parse(data);
-      console.log(yolo82); //This will show array of bookings where time = selected time
-      
+      var yolo82 = JSON.parse(data); //This will show array of bookings where time = selected time
       $(yolo82).each(function(index) {
-        // If booking table has this.service_id && this.date && this.time,
-        // disable service checkbox where the service == service_id
-        console.log(this.date);
-        
+      // yolo82 is array of objects where (date = selected date && time = selected time)      
+      var checkbox_id = "checkbox" + (this.service_id).toString();
+      $('#' + checkbox_id).prop( "disabled", true );
+      
       });
       
       

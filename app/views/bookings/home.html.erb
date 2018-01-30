@@ -62,8 +62,8 @@
               <td><%= service.price %></td>
               <td><%= service.therapist.name %></td>
               <td>
-                <input type="checkbox" id="<%= service.id %>" class="service_checkbox"/>
-                <label for="<%= service.id %>"></label>
+                <input type="checkbox" id="checkbox<%= service.id %>" class="service_checkbox"/>
+                <label for="checkbox<%= service.id %>"></label>
                 <%= booking_form.check_box :service_id, { :class => 'time_selector'} %>
                 <%#= check_box_tag(service.id) %>
                 <%#= label_tag(service.id) %>
