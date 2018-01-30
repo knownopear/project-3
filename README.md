@@ -13,7 +13,7 @@ Live Version:
 ### Entity-Relationship Diagram
 
 ### Flowchart
-
+![flowchart revised](https://user-images.githubusercontent.com/31798170/35548283-5c332d04-05b9-11e8-8200-b79b9bc44625.png)
 
 ### Wireframe
 

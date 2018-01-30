@@ -15,26 +15,6 @@ body, html{
   background-size:cover;
   background-repeat:no-repeat;
   background-image: url('../images/abstract.png');
-  background-attachment:fixed;
-}
-
-.container {
-  background-image: url('images/abstract.png');
-}
-
-
-#about-pic2 {
-  position:relative;
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-image: url('images/place.png');
-
-}
-
-.services {
-  background-image:url('images/abstract.png');
-  min-height:400px;
 }
 
 .section {
@@ -78,9 +58,6 @@ body, html{
     background-attachment:scroll;
   }
 }
-
-
-
 
 nav .nav-wrapper .white {
 position: relative;
@@ -205,14 +182,12 @@ p {
   }
 }
 
-
 .icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
   font-size: inherit;
 }
-
 
 .footer-copyright {
   position: relative;
@@ -222,11 +197,9 @@ p {
   text-align: center;
 }
 
-
 footer.page-footer {
   margin: 0;
 }
-
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;

@@ -1,9 +1,9 @@
 <!-- ################# Select Timing & Therapist ################# -->
 <div class="backgrd">
   <!-- <%= image_tag( root_url + "images/abstract.png") %> -->
-  <div class="container">
 
-    <div class="input-field col s12 m6 l4 white">
+  <div class="container">
+    <div class="input-field col s12 m6 white">
       <select class="icons">
         <option value="" disabled selected>Choose Your Therapist</option>
           <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
@@ -11,7 +11,7 @@
           <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
       </select>
 
-      <div class="input-field col s12 m6 l4 white">
+      <div class="input-field col s12 m6 white">
         <select class="icons">
           <option value="" disabled selected>Choose Your Timing</option>
           <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
@@ -22,44 +22,43 @@
     </div>
 
 
-
 <table class="highlight bordered white" id="table">
-          <thead>
-            <tr>
-              <th>Service</th>
-              <th class="description">Description</th>
-              <th class="price">Price</th>
-              <th>Therapist</th>
-              <th>Select</th>
-            </tr>
-          </thead>
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th class="description">Description</th>
+        <th class="price">Price</th>
+        <th>Therapist</th>
+        <th>Select</th>
+      </tr>
+    </thead>
 
-          <tbody>
-            <% @all_services.each do |service| %>
-              <tr>
-                <td>
-                  <%= service.name %>
-                </td>
-                <td>
-                  <%= service.description %>
-                </td>
-                <td>
-                  <%= service.price.to_i %>
-                </td>
-                <td>
-                  <%= service.therapist.name %>
-                </td>
-                <td>
-                  <input type="checkbox" id="<%= service.id %>" />
-                  <label for="<%= service.id %>"></label>
-                </td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-        <button class="btn waves-effect waves-light" id="submit-btn" type="submit" name="action">Submit
-          <i class="material-icons right">send</i>
-        </button>
+    <tbody>
+      <% @all_services.each do |service| %>
+        <tr>
+          <td>
+            <%= service.name %>
+          </td>
+          <td>
+            <%= service.description %>
+          </td>
+          <td>
+            <%= service.price.to_i %>
+          </td>
+          <td>
+            <%= service.therapist.name %>
+          </td>
+          <td>
+            <input type="checkbox" id="<%= service.id %>" />
+            <label for="<%= service.id %>"></label>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <button class="btn waves-effect waves-light" id="submit-btn" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
   </div>
 </div>
 
@@ -125,15 +124,12 @@
 
     </div>
   </div>
-    </div>
-
-
+</div>
 
 
 <!-- ################# Contact Us ################# -->
 
 <div class="container">
-
     <div class="row">
         <div class="col s12 m6">
           <p>Email: email@email.com</p>
@@ -172,9 +168,7 @@
           </form>
 
           <div class="col s12 m6">
-
-
-        </div>
+          </div>
       </div>
     </div>
   </div>

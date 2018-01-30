@@ -22,6 +22,8 @@ $(document).on('turbolinks:load', function() {
   $('.parallax').parallax();
   $('ul.tabs').tabs();
   $('select').material_select();
+  $(".button-collapse").sideNav();
+  $(".dropdown-button").dropdown();
 
   $('.activate-side').sideNav({
     menuWidth: 300, // Default is 300
@@ -29,12 +31,4 @@ $(document).on('turbolinks:load', function() {
     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
     draggable: true, // Choose whether you can drag to open on touch screens,
   });
-
-$(document).ready(function() {
-  $('select').material_select();
-  });
 });
-
-$(".button-collapse").sideNav();
-
-$(".dropdown-button").dropdown();

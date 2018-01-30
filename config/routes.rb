@@ -4,10 +4,6 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#home'
   get '/logout', to: 'pages#home'
 
-  # get '/logout' => 'sessions#destroy'
-  # delete '/logout' => 'sessions#destroy'
-
-  
   devise_for :users,
   path: '',
   path_names: {
