@@ -41,26 +41,55 @@ $(document).on('turbolinks:load', function() {
     close: 'Ok',
     closeOnSelect: true, // Close upon selecting a date,
     onSet: function(date) {
-        console.log(new Date(date.select));
+      console.log(new Date(date.select));
     }
   });
   
   $('.time_selector').dropdown({
     // Forces drop-up menu, remove if not required
-      belowOrigin: true
-    }
-  );
-  
-  // ########## OTHER FUNCTIONS ########## //
+    belowOrigin: true
+  }
+);
 
-  // $(".service_checkbox").change(function(){
-  //   if(this.checked) {
-  //     console.log("This is checked");
-  // 
-  //   }
-  //   else if (!this.checked) {
-  //     console.log("This is unchecked");
-  //   }
-  // });
+$('.time_selector').change(function() {
+  // console.log($('#booking_time').val());
   
+  $.ajax({
+    url: '/bookings',
+    type: 'post',
+    data: $('#booking_time').val(),
+    success: function(data) { // console.log(data); // data is @matched_booking_by_time obj, manipulate the data
+      
+      var yolo82 = JSON.parse(data);
+      console.log(yolo82); //This will show array of bookings where time = selected time
+      
+      $(yolo82).each(function(index) {
+        // If booking table has this.service_id && this.date && this.time,
+        // disable service checkbox where the service == service_id
+        console.log(this.date);
+        
+      });
+      
+      
+      
+      
+    },
+    error: function(data) {
+      console.log(data);
+    }
+  });
+});
+
+// ########## OTHER FUNCTIONS ########## //
+
+// $(".service_checkbox").change(function(){
+//   if(this.checked) {
+//     console.log("This is checked");
+// 
+//   }
+//   else if (!this.checked) {
+//     console.log("This is unchecked");
+//   }
+// });
+
 });

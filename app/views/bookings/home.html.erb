@@ -3,8 +3,7 @@
     <div class="container">
       <div class="row center">
 
-        <%= form_for @booking  do |booking_form| %>
-
+        <%= form_for @booking, remote: true do |booking_form| %>
         <%#= booking_form.text_field :time %>
 
         <div>
@@ -12,7 +11,7 @@
             <input type="text" class="datepicker" id="date_selector" placeholder="Choose Your Date">
           </div>
 
-          <div class="input-field col s12 m6 teal">
+          <div class="input-field col s12 m6 teal time_selector">
             <%= booking_form.select :time,
             options_for_select([
               ["Choose Your Timeslot", "0"],

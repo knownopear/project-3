@@ -14,6 +14,8 @@ class BookingsController < ApplicationController
     end
 
 
+
+
   end
 
 
@@ -24,7 +26,15 @@ class BookingsController < ApplicationController
 
   def create
     # @new_booking = current_user.booking.create(booking_params)
-    render json: params
+    # render json: params
+
+    @matched_booking_by_time = Booking.where(time: params.keys[0]) #params.keys[0] is the selected time's value
+    respond_to do |format|
+      format.js { render json: @matched_booking_by_time }
+      # render json: @matched_booking_by_time
+    end
+
+
   end
 
 
