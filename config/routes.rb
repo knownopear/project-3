@@ -2,7 +2,12 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get '/about', to: 'pages#home'
+  get '/logout', to: 'pages#home'
 
+  # get '/logout' => 'sessions#destroy'
+  # delete '/logout' => 'sessions#destroy'
+
+  
   devise_for :users,
   path: '',
   path_names: {
@@ -13,7 +18,6 @@ Rails.application.routes.draw do
    # can change to registration: 'signup', <= to change the routes
    sign_up: ''
   }
-
 end
 
 

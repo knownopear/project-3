@@ -33,10 +33,11 @@ class BookingsController < ApplicationController
         Booking.find(params[:id]).delete
         redirect_to bookings_path
     end
+  
+    private
 
-      
     def booking_params
-        params.require(:booking).permit(:name, :date, :timeslot, :therapist, :price)
+        params.require(:booking).permit(:name, :timing, :therapist, :price)
     end
+end
 
-# end
