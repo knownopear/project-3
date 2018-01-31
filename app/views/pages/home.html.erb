@@ -1,7 +1,5 @@
 <!-- ################# Select Timing & Therapist ################# -->
 <div class="backgrd">
-  <!-- <%= image_tag( root_url + "images/abstract.png") %> -->
-
   <div class="container">
     <div class="input-field col s12 m6 white">
       <select class="icons">
@@ -27,7 +25,7 @@
       <tr>
         <th>Service</th>
         <th class="description">Description</th>
-        <th class="price">Price</th>
+        <th class="price">Price(SGD)</th>
         <th>Therapist</th>
         <th>Select</th>
       </tr>
@@ -56,9 +54,11 @@
       <% end %>
     </tbody>
   </table>
-  <button class="btn waves-effect waves-light" id="submit-btn" type="submit" name="action">Submit
+
+    <button class="btn waves-effect waves-light" id="submit-btn" type="submit" name="action">Submit
     <i class="material-icons right">send</i>
-  </button>
+    </button>
+
   </div>
 </div>
 
@@ -99,7 +99,7 @@
     </div>
 </section>
 
-<div class="pics">
+<section class="section section-light" id="pics">
     <div class="row">
           <div class="col s12 m4 l2">
             <%= image_tag( root_url + "images/aroma.png", size: "320x210") %>
@@ -121,28 +121,18 @@
             <div class="col s12 m6 l3" id="about-pic2"></div>
             <%= image_tag( root_url + "images/place.png", size: "1300x300") %>
           </div>
-
     </div>
-  </div>
+
 </div>
 
 
 <!-- ################# Contact Us ################# -->
 
-<div class="container">
     <div class="row">
         <div class="col s12 m6">
           <p>Email: email@email.com</p>
           <p>Phone: 6543 2130</p>
           <p>Address: 123 Shan Road</p>
-
-          <div class="social-icons">
-              <ul>
-                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-            </div>
         </div>
 
   <div class="row">
@@ -164,7 +154,7 @@
             <div class="row-message">
                 <textarea id="message" class="form-control" name="message" placeholder="Your Message" rows="5" required></textarea>
             </div>
-            <button name="submit" class="btn submit-btn" type="submit" id="submit">Send</button><br/>
+            <button name="submit" class="btn contact-btn" type="submit" id="submit">Send</button><br/>
           </form>
 
           <div class="col s12 m6">
@@ -172,4 +162,3 @@
       </div>
     </div>
   </div>
-</div>

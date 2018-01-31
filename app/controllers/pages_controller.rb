@@ -7,4 +7,8 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def thanks
+    @user = User.new
+  end
 end

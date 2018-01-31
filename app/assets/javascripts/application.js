@@ -19,11 +19,12 @@
 //= require materialize
 
 $(document).on('turbolinks:load', function() {
-  $('.parallax').parallax();
+  // $('.parallax').parallax();
   $('ul.tabs').tabs();
   $('select').material_select();
   $(".button-collapse").sideNav();
   $(".dropdown-button").dropdown();
+  $('.slider').slider();
 
   $('.activate-side').sideNav({
     menuWidth: 300, // Default is 300

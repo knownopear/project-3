@@ -3,9 +3,15 @@ body, html{
   margin:0;
   font-size:16px;
   font-family:"Lato", sans-serif;
-  font-weight:400;
-  line-height:1.8em;
-  color:#666;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 1.5rem;
 }
 
 .backgrd {
@@ -17,63 +23,12 @@ body, html{
   background-image: url('../images/abstract.png');
 }
 
-.section {
-  text-align:center;
-  padding:50px 80px;
-}
-
-.section-light {
-  background-color:#f4f4f4;
-  color:#666;
-}
-
-.section-dark {
-  background-color:#282e34;
-  color:#ddd;
-}
-
-.ptext {
-  position:absolute;
-  top:50%;
-  width:100%;
-  text-align:center;
-  color:#000;
-  font-size:27px;
-  letter-spacing:8px;
-  text-transform:uppercase;
-}
-
-.ptext .border {
-  background-color:#111;
-  color:#fff;
-  padding:20px;
-}
-
-.ptext .border.trans {
-  background-color:transparent;
-}
-
-@media(max-width:568px){
-  .pimg1, .pimg2, .services{
-    background-attachment:scroll;
-  }
-}
-
-nav .nav-wrapper .white {
-position: relative;
-height: 80px;
-line-height: 80px;
-}
-
 td, th {
   line-height: 20px;
   width: 20%;
-  // border: 1px solid rgb(185, 181, 181);
   text-align: left;
   height: 50px;
-  vertical-align: center;
   padding: 15px;
-  color: black;
 }
 
 #table {
@@ -84,45 +39,12 @@ td, th {
   width: 100%;
 }
 
-#selection {
-  color: black;
-  opacity: 0.8;
-}
-
-.container-about {
-  text-align: center;
-  height: 900px;
-}
-
-.container-contact {
-  height:3em;
-  padding-top: 2em;
-}
-
-#about h5 {
-  padding-top: 5em;
-}
-
 .side-nav, h4 {
   color: black;
   padding: 1em;
   text-align: center;
   margin-left: 0.3em;
   line-height: 1em;
-}
-
-.contact-info {
-border: 1px solid black;
-
-}
-
-.icon-block {
-  padding-top: 3em;
-}
-
-.parallax {
-  width: 100%;
-  background-size: 100% 100%;
 }
 
 .btn {
@@ -134,71 +56,42 @@ border: 1px solid black;
   background-color: #424242;
 }
 
-// display: block;
-//     padding: 12px;
-//     width: 100%;
-//     color: #fff;
-//     border: 0;
-//     margin-top: 40px;
-
-nav ul a,
-nav .brand-logo {
-  color: #444;
+.btn thanks-btn {
+  padding-bottom: 0;
 }
 
-p {
-  line-height: 1.5rem;
+.section {
+  text-align:center;
+  padding:50px 80px;
+  width: 100%;
 }
 
-.button-collapse {
-  border-color: #ffff;
+.section-light {
+  background-color:#f4f4f4;
+  color:#666;
 }
 
-.parallax-container {
-  min-height: 1400px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
+#pics {
+  position:relative;
+  // background-image: url('../images/aroma.png');
+  // background-image: url('../images/massage.png');
+  // background-image: url('../images/hair.png');
+  // background-image: url('../images/shave.png');
+  // background-image: url('../images/place.png');
+  width: 100%;
+  height: 20em;
 }
 
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
+.form p {
+  text-align: center;
 }
 
 .footer-copyright {
   position: relative;
   width: 100%;
-  height: 1em;
+  height: 2em;
   bottom: 0;
   text-align: center;
-}
-
-footer.page-footer {
-  margin: 0;
 }
 
 @mixin border-radius($radius) {
