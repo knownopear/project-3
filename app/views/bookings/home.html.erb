@@ -3,12 +3,12 @@
     <div class="container">
       <div class="row center">
 
-        <%= form_for @booking, remote: true do |booking_form| %>
+        <%= form_for @booking do |booking_form| %>
         <%#= booking_form.text_field :time %>
-
         <div>
           <div class="input-field col s12 m6 teal">
-            <input type="text" class="datepicker" id="date_selector" placeholder="Choose Your Date">
+            <%= booking_form.text_field :date, class: 'datepicker', id: 'date_selector', placeholder: 'Choose Your Dates' %>
+            <!-- This is the datepicker in rails format -->
           </div>
 
           <div class="input-field col s12 m6 teal time_selector">
@@ -37,49 +37,45 @@
               ["20:30PM", "20"]
               ], { :class => 'time_selector', :id => 'time_selector' })
               %>
-
+            </div>
           </div>
+
+
+          <!-- ################# Services ################# -->
+          <table class="highlight bordered teal lighten-2">
+            <thead>
+              <tr>
+                <th>Service Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Therapist</th>
+                <th>Select</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @all_services.each do |service| %>
+              <tr>
+                <td><%= service.name %></td>
+                <td><%= service.description %></td>
+                <td><%= service.price %></td>
+                <td><%= service.therapist.name %></td>
+                <td>
+                  <input type="checkbox" name="booking[services_list][<%= service.id %>]" id="checkbox<%= service.id %>" class="service_checkbox"/>
+                  <label for="checkbox<%= service.id %>"></label>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+          <%= booking_form.submit 'Proceed To payment', :class => 'btn waves-effect waves-light' %>
+          <%#= submit_tag("Proceed To Payment", :id=>"button", :class=>"btn waves-effect waves-light", :name=>"action") %>
+          <% end %>
+
+
+
         </div>
-
-
-        <!-- ################# Services ################# -->
-        <table class="highlight bordered teal lighten-2">
-          <thead>
-            <tr>
-              <th>Service Name</th>
-              <th>Description</th>
-              <th>Price</th>
-              <th>Therapist</th>
-              <th>Select</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <% @all_services.each do |service| %>
-            <tr>
-              <td><%= service.name %></td>
-              <td><%= service.description %></td>
-              <td><%= service.price %></td>
-              <td><%= service.therapist.name %></td>
-              <td>
-                <input type="checkbox" id="checkbox<%= service.id %>" class="service_checkbox"/>
-                <label for="checkbox<%= service.id %>"></label>
-                <%= booking_form.check_box :service_id, { :class => 'time_selector'} %>
-                <%#= check_box_tag(service.id) %>
-                <%#= label_tag(service.id) %>
-              </td>
-            </tr>
-            <% end %>
-          </tbody>
-        </table>
-        <!-- ################# End Services ################# -->
-        <%= booking_form.submit %>
-        <%#= submit_tag("Proceed To Payment", :id=>"button", :class=>"btn waves-effect waves-light", :name=>"action") %>
-        <% end %>
-
-
-
       </div>
     </div>
   </div>
-</div>

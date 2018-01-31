@@ -41,7 +41,8 @@ $(document).on('turbolinks:load', function() {
     close: 'Ok',
     closeOnSelect: true, // Close upon selecting a date,
     onSet: function(date) {
-      selected_date = (new Date(date.select).toISOString().slice(0, -14));
+      selected_date = new Date(date.select);
+      console.log(selected_date);
       // Uncaught range error because onset detects all selections within pickadate interface, so if you click next month 
       // there is no 'date' that you've selected, hence you cant run all the following functions
     }
@@ -55,27 +56,20 @@ $(document).on('turbolinks:load', function() {
 
 $('.time_selector').change(function() {  
   parsedData = {time : $('#booking_time').val(), date : selected_date}
-  // console.log(passedData);
   
   $.ajax({
-    url: '/bookings',
+    url: '/bookings/filter',
     type: 'post',
     data: parsedData,
     success: function(data) { // console.log(data); // data is @matched_booking (time = selected time, date = selected date)
-      // console.log(data);
+      console.log(data);
       $('.service_checkbox').prop( "disabled", false );
       
-      var yolo82 = JSON.parse(data); //This will show array of bookings where time = selected time
-      $(yolo82).each(function(index) {
-      // yolo82 is array of objects where (date = selected date && time = selected time)      
-      var checkbox_id = "checkbox" + (this.service_id).toString();
-      $('#' + checkbox_id).prop( "disabled", true );
-      
+      var date_time_matched = JSON.parse(data); // date_time_matched is array of objects where (date = selected date && time = selected time) 
+      $(date_time_matched).each(function(index) {
+        var checkbox_id = "checkbox" + (this.service_id).toString();
+        $('#' + checkbox_id).prop( "disabled", true );
       });
-      
-      
-      
-      
     },
     error: function(data) {
       console.log(data);

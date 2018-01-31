@@ -1,20 +1,11 @@
 class BookingsController < ApplicationController
   # before_action :authenticate_user!, except: [:index, :show]
+  skip_before_action :verify_authenticity_token, only: :about_post
 
 
   def home
     @all_services = Service.all
     @booking = Booking.new
-    @all_bookings = Booking.all
-    @bookings_on_date = @all_bookings.where(date: '2018-01-29')
-    # render json: @bookings_on_date
-
-    @slots_taken = @bookings_on_date.each do |booking|
-      p booking.time
-    end
-
-
-
 
   end
 
@@ -23,17 +14,36 @@ class BookingsController < ApplicationController
     @all_services = Service.all.order(created_at: :asc)
   end
 
+  def about_post
+    render json: params
+  end
+
 
   def create
-    # @new_booking = current_user.booking.create(booking_params)
-    # render json: params
+    services_list = params[:booking][:services_list]
 
+    services_list.each do |service_id|
+      booked_service = Service.find(service_id.to_i)
+
+      booked_service.slots_taken.times do |index|
+        new_booking = Booking.new
+
+        new_booking.user = current_user
+        new_booking.service = booked_service
+        new_booking.date = params[:booking][:date]
+        new_booking.time = params[:booking][:time].to_i + index
+
+        new_booking.save
+      end
+    end
+    redirect_to root_path
+  end
+
+  def filter
     @matched_booking = Booking.where({time: params[:time], date: params[:date]}) #params.keys[0] is the selected time's value
     respond_to do |format|
       format.js { render json: @matched_booking}
     end
-
-
   end
 
 
@@ -60,10 +70,8 @@ class BookingsController < ApplicationController
   end
 
 
-
-
   def booking_params
-    params.require(:booking).permit(:name, :date, :timeslot, :therapist, :price)
+    params.require(:booking).permit(:name, :date, :time, :service_id, :reference_number)
   end
 
 end

@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   root 'bookings#home'
   get '/about', to: 'bookings#about'
-
+  post '/about', to: 'bookings#about_post'
+  post '/bookings/filter', to: 'bookings#filter'
   resource :bookings
 
   devise_for :users,
