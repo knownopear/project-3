@@ -2,7 +2,7 @@
 
 Our company is developing a website with easy booking system catering to men with services that include massage, facial and haircut at one place, offering the convenience and relaxation which they want in their life.
 
-Soft Launch Version: https://hidden-shore-67288.herokuapp.com/
+Link: https://mennstop.herokuapp.com/
 
 ---
 ## Work Flow
