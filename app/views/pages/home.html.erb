@@ -1,82 +1,63 @@
 <!-- ################# Select Timing & Therapist ################# -->
 <div class="backgrd">
   <div class="container">
+    <div class="input-field col s12 m6 white">
+      <select class="icons">
+        <option value="" disabled selected>Choose Your Therapist</option>
+          <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
+          <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
+          <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
+      </select>
 
-    <div class="row center">
-
-      <%= form_for @booking do |booking_form| %>
-      <%#= booking_form.text_field :time %>
-      <div>
-        <div class="input-field col s12 m6 white">
-          <%= booking_form.text_field :date, class: 'datepicker', id: 'date_selector', placeholder: 'Choose Your Dates' %>
-          <!-- This is the datepicker in rails format -->
-        </div>
-
-        <div class="input-field col s12 m6 white time_selector">
-          <%= booking_form.select :time,
-          options_for_select([
-            ["Choose Your Timeslot", "0"],
-            ["11:00AM", "1"],
-            ["11:30AM", "2"],
-            ["12:00PM", "3"],
-            ["12:30PM", "4"],
-            ["13:00PM", "5"],
-            ["13:30PM", "6"],
-            ["14:00PM", "7"],
-            ["14:30PM", "8"],
-            ["15:00PM", "9"],
-            ["15:30PM", "10"],
-            ["16:00PM", "11"],
-            ["16:30PM", "12"],
-            ["17:00PM", "13"],
-            ["17:30PM", "14"],
-            ["18:00PM", "15"],
-            ["18:30PM", "16"],
-            ["19:00PM", "17"],
-            ["19:30PM", "18"],
-            ["20:00PM", "19"],
-            ["20:30PM", "20"]
-            ], { :class => 'time_selector', :id => 'time_selector' })
-            %>
-          </div>
-        </div>
-
-
-        <!-- ################# Services ################# -->
-        <table class="highlight bordered white" id="table">
-          <thead>
-            <tr>
-              <th>Service Name</th>
-              <th class="description">Description</th>
-              <th class="price">Price(SGD)</th>
-              <th>Therapist</th>
-              <th>Select</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <% @all_services.each do |service| %>
-            <tr>
-              <td><%= service.name %></td>
-              <td><%= service.description %></td>
-              <td><%= service.price %></td>
-              <td><%= service.therapist.name %></td>
-              <td>
-                <input type="checkbox" name="booking[services_list][<%= service.id %>]" id="checkbox<%= service.id %>" class="service_checkbox"/>
-                <label for="checkbox<%= service.id %>"></label>
-              </td>
-            </tr>
-            <% end %>
-          </tbody>
-        </table>
-
-        <%= booking_form.submit 'Proceed To payment', :class => 'btn waves-effect waves-light', :id => 'submit-btn' %>
-        <%#= submit_tag("Proceed To Payment", :id=>"button", :class=>"btn waves-effect waves-light", :name=>"action") %>
-        <% end %>
-
-
-
+      <div class="input-field col s12 m6 white">
+        <select class="icons">
+          <option value="" disabled selected>Choose Your Timing</option>
+          <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
+          <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
+          <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
+          </select>
       </div>
+    </div>
+
+
+<table class="highlight bordered white" id="table">
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th class="description">Description</th>
+        <th class="price">Price(SGD)</th>
+        <th>Therapist</th>
+        <th>Select</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @all_services.each do |service| %>
+        <tr>
+          <td>
+            <%= service.name %>
+          </td>
+          <td>
+            <%= service.description %>
+          </td>
+          <td>
+            <%= service.price.to_i %>
+          </td>
+          <td>
+            <%= service.therapist.name %>
+          </td>
+          <td>
+            <input type="checkbox" id="<%= service.id %>" />
+            <label for="<%= service.id %>"></label>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+    <button class="btn waves-effect waves-light" id="submit-btn" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+    </button>
 
   </div>
 </div>
@@ -121,24 +102,24 @@
 <section class="section section-light" id="pics">
     <div class="row">
           <div class="col s12 m4 l2">
-            <%= image_tag("aroma.png", size: "320x210") %>
+            <%= image_tag( root_url + "images/aroma.png", size: "320x210") %>
           </div>
 
           <div class="col s12 m4 l2">
-            <%= image_tag("massage.png", size: "320x210") %>
+            <%= image_tag( root_url + "images/massage.png", size: "320x210") %>
           </div>
 
           <div class="col s12 m4 l2">
-            <%= image_tag("hair.png", size: "320x210") %>
+            <%= image_tag( root_url + "images/hair.png", size: "320x210") %>
           </div>
 
           <div class="col s12 m4 l2">
-            <%= image_tag("shave.png", size: "320x210") %>
+            <%= image_tag( root_url + "images/shave.png", size: "320x210") %>
           </div>
 
           <div class="row">
             <div class="col s12 m6 l3" id="about-pic2"></div>
-            <%= image_tag("place.png", size: "1300x300") %>
+            <%= image_tag( root_url + "images/place.png", size: "1300x300") %>
           </div>
     </div>
 

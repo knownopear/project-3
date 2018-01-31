@@ -1,4 +1,4 @@
-# Project 3: 
+# Project 3:
 
 Our company is developing a website with easy booking system catering to men with services that include massage, facial and haircut at one place, offering the convenience and relaxation which they want in their life.
 
@@ -8,12 +8,15 @@ Live Version:
 ## Work Flow
 
 ### User Stories
+![userstories_finalised](https://user-images.githubusercontent.com/31798170/35610116-1a591bd6-069b-11e8-9054-46a22c62d891.png)
 
 
 ### Entity-Relationship Diagram
+![erd_finalised](https://user-images.githubusercontent.com/31798170/35610133-27a2b338-069b-11e8-9795-2b85691e832f.png)
+
 
 ### Flowchart
-
+![flowchart revised](https://user-images.githubusercontent.com/31798170/35548283-5c332d04-05b9-11e8-8200-b79b9bc44625.png)
 
 ### Wireframe
 
@@ -26,8 +29,8 @@ This README would normally document whatever steps are necessary to get the appl
 Things you may want to cover:
 
 * Ruby version: 2.5.0, Ruby on Rails
-* CSS framework: Materialize 
-* Gems: 
+* CSS framework: Materialize
+* Gems:
 
 * System dependencies
 
@@ -50,11 +53,10 @@ Things you may want to cover:
 
 ---
 ## Scalable Areas
-* 
+*
 ---
 ## Project Team / Collaboration
 *
 ---
 ## Acknowledgments
 * Image Sources:
-

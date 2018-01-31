@@ -19,12 +19,13 @@
 //= require materialize
 
 $(document).on('turbolinks:load', function() {
-  var selected_date;
-  // ########## MATERIALIZE FUNCTIONS ########## //
-  $('.parallax').parallax();
+  // $('.parallax').parallax();
   $('ul.tabs').tabs();
   $('select').material_select();
-  
+  $(".button-collapse").sideNav();
+  $(".dropdown-button").dropdown();
+  $('.slider').slider();
+
   $('.activate-side').sideNav({
     menuWidth: 300, // Default is 300
     edge: 'right', // Choose the horizontal origin

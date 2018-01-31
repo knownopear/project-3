@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
   def home
     @all_services = Service.all
     @booking = Booking.new
+    @user = User.new
 
   end
 
