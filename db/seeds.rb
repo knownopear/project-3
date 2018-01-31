@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Therapist Name
+# Therapist Name
 10.times do |index|
   Therapist.create(
     name: Faker::Name.first_name
