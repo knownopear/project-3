@@ -2,7 +2,7 @@
 
 Our company is developing a website with easy booking system catering to men with services that include massage, facial and haircut at one place, offering the convenience and relaxation which they want in their life.
 
-Live Version:
+Soft Launch Version: https://hidden-shore-67288.herokuapp.com/
 
 ---
 ## Work Flow
@@ -19,7 +19,7 @@ Live Version:
 ![flowchart revised](https://user-images.githubusercontent.com/31798170/35548283-5c332d04-05b9-11e8-8200-b79b9bc44625.png)
 
 ### Wireframe
-
+![wireframe](https://user-images.githubusercontent.com/31798170/35616686-f30d62e2-06b0-11e8-88d9-9c4509a3acaa.png)
 ---
 
 ## Built With / Technologies
