@@ -44,8 +44,8 @@ $(document).on('turbolinks:load', function() {
     onSet: function(date) {
       selected_date = new Date(date.select);
       console.log(selected_date);
-      // Uncaught range error because onset detects all selections within pickadate interface, so if you click next month
-      // there is no 'date' that you've selected, hence you cant run all the following functions
+      // $('.time_dropdown').prop( "disabled", false );
+
     }
   });
 
@@ -62,7 +62,7 @@ $('.time_selector').change(function() {
     url: '/bookings/filter',
     type: 'post',
     data: parsedData,
-    success: function(data) { // console.log(data); // data is @matched_booking (time = selected time, date = selected date)
+    success: function(data) { // data is @matched_booking (time = selected time, date = selected date)
       console.log(data);
       $('.service_checkbox').prop( "disabled", false );
 
@@ -78,27 +78,23 @@ $('.time_selector').change(function() {
   });
 });
 
-// ########## OTHER FUNCTIONS ########## //
 
-// $(".service_checkbox").change(function(){
-//   if(this.checked) {
-//     console.log("This is checked");
+// ########## OTHER FUNCTIONS ########## //
 //
-//   }
-//   else if (!this.checked) {
-//     console.log("This is unchecked");
+// var handler = StripeCheckout.configure({
+//   key: 'pk_test_tohAIYduSlgS1QsGa1ANeIPA',
+//   image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+//   locale: 'auto',
+//   token: function(token) {
+//     // You can access the token ID with `token.id`.
+//     // Get the token ID to your server-side code for use.
 //   }
 // });
-
-// function myMap() {
-// var mapProp= {
-//     center:new google.maps.LatLng(51.508742,-0.120850),
-//     zoom:5,
-// };
-// var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-// }
 //
-// <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBInAVZ7CwlS_NukRgc-vg5RzBE1pFaEp0&callback=initMap"
-// type="text/javascript"></script>
+// window.addEventListener('popstate', function() {
+//   handler.close();
+// });
+//
 
-});
+
+}); // end document on load

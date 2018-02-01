@@ -9,9 +9,11 @@ class BookingsController < ApplicationController
     @user = User.new
   end
 
+
   def services
     @all_services = Service.all.order(created_at: :asc)
   end
+
 
   def about_post
     render json: params
@@ -26,10 +28,12 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @total_amount = 0
     services_list = params[:booking][:services_list]
 
     services_list.each do |service_id|
       booked_service = Service.find(service_id.to_i)
+      @total_amount += booked_service.price * 100
 
       booked_service.slots_taken.times do |index|
         new_booking = Booking.new
@@ -42,8 +46,16 @@ class BookingsController < ApplicationController
         new_booking.save
       end
     end
-    redirect_to root_path
+
+    # respond_to do |format|
+    #   format.js
+    # end
+
+
+    redirect_to thanks_path
   end
+
+
 
   def filter
     @matched_booking = Booking.where({time: params[:time], date: params[:date]}) #params.keys[0] is the selected time's value
