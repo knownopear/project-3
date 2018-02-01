@@ -36,6 +36,7 @@ Link: https://mennstop.herokuapp.com/
 ## Project Team / Collaboration
 ![project github](https://user-images.githubusercontent.com/31798170/35668830-056ddf08-076e-11e8-802b-8fdcece496fe.jpg)
 ![github branches](https://user-images.githubusercontent.com/31798170/35668880-3c9f09c0-076e-11e8-80ee-1fe11b2be6d1.jpg)
+![timeline_emjys](https://user-images.githubusercontent.com/31798170/35682650-5ec49744-079c-11e8-9ea7-3074fe5b1576.png)
 ![Speed-timeline](https://i.imgur.com/98iIGQj.png)
 ---
 ## Back-End Conclusions
@@ -49,8 +50,6 @@ Link: https://mennstop.herokuapp.com/
 * Clear thinking
 * No-harm-in-trying
 * Communication is key; talking is not communication
-
-
 ---
 ## Acknowledgments – Image Sources:
 * Christin Hume, Chris Knight, Christoffer Engström on Unsplash,
