@@ -4,18 +4,18 @@
 
     <div class="row center">
 
-      <%= form_for @booking, remote: true do |booking_form| %>
+      <%= form_for @booking do |booking_form| %>
       <%#= booking_form.text_field :time %>
       <div>
         <div class="input-field col s12 m6 white">
-          <%= booking_form.text_field :date, class: 'datepicker', id: 'date_selector', placeholder: 'Choose Your Date' %>
+          <%= booking_form.text_field :date, class: 'datepicker', id: 'date_selector', placeholder: 'Select Date' %>
           <!-- This is the datepicker in rails format -->
         </div>
 
         <div class="input-field col s12 m6 white time_selector">
           <%= booking_form.select :time,
           options_for_select([
-            ["Choose Your Timeslot", "0"],
+            ["Select Timeslot", "0"],
             ["11:00AM", "1"],
             ["11:30AM", "2"],
             ["12:00PM", "3"],
@@ -46,7 +46,7 @@
         <table class="highlight bordered white" id="table">
           <thead>
             <tr>
-              <th>Service Name</th>
+              <th>Service</th>
               <th class="description">Description</th>
               <th class="price">Price(SGD)</th>
               <th>Therapist</th>
@@ -70,8 +70,7 @@
           </tbody>
         </table>
           <%= hidden_field_tag(:stripeToken) %>
-        <%= booking_form.submit 'Submit Booking and Pay', :class => 'btn waves-effect waves-light', :id => 'submit-btn' %>
-        <%#= submit_tag("Proceed To Payment", :id=>"button", :class=>"btn waves-effect waves-light", :name=>"action") %>
+        <%= booking_form.submit 'Proceed To Pay', :class => 'btn waves-effect waves-light', :id => 'submit-btn' %>
         <% end %>
 
         <%= form_tag charges_path do %>
@@ -96,14 +95,16 @@
 <!-- ################# About ################# -->
 <section class="section section-light" id="about">
   <h3>About Us</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisiporibus ex, omnis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. dolor repellendus ratione in. Lorem ipsum dolor sit amet, consectetur adipisiporibus ex, omnis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. dolor repellendus ratione in.</p>
+    <h5>MennStop is the ultimate grooming place for the busy men.</h5>
+    <p>Easy booking system catering services that include massage, facial, shave and haircut at one place,</p>
+    <p>offering the convenience, relaxation – feeling and looking your best.</p>
 
     <div class="row">
       <div class="col s12 m4">
         <div class="icon-block">
-          <h4 class="center brown-text">
+          <h2 class="center brown-text">
             <i class="material-icons">airline_seat_recline_extra</i>
-          </h4>
+          </h2>
           <h6 class="center">Catered For You</h6>
         </div>
       </div>
@@ -111,18 +112,18 @@
 
       <div class="col s12 m4">
         <div class="icon-block">
-          <h4 class="center brown-text">
+          <h2 class="center brown-text">
             <i class="material-icons">alarm_off</i>
-          </h4>
+          </h2>
           <h6 class="center">No Interruptions</h6>
         </div>
       </div>
 
       <div class="col s12 m4">
         <div class="icon-block">
-          <h4 class="center brown-text">
+          <h2 class="center brown-text">
             <i class="material-icons">mood</i>
-          </h4>
+          </h2>
           <h6 class="center">Fuss Free</h6>
         </div>
       </div>
@@ -132,19 +133,19 @@
 <section class="section section-light" id="pics">
     <div class="row">
           <div class="col s12 m3 img_div">
-            <%= image_tag("aroma_small.png", class: "responsive-img") %>
+            <%= image_tag("aroma.png", class: "responsive-img") %>
           </div>
 
           <div class="col s12 m3 img_div">
-            <%= image_tag("massage_small.png", class: "responsive-img") %>
+            <%= image_tag("massage.png", class: "responsive-img") %>
           </div>
 
           <div class="col s12 m3 img_div">
-            <%= image_tag("hair_small.png", class: "responsive-img") %>
+            <%= image_tag("hair.png", class: "responsive-img") %>
           </div>
 
           <div class="col s12 m3 img_div">
-            <%= image_tag("shave_small.png", class: "responsive-img") %>
+            <%= image_tag("shave.png", class: "responsive-img") %>
           </div>
 
             <div class="col s12 img_div">
@@ -157,12 +158,19 @@
 
 <!-- ################# Contact Us ################# -->
 
-    <div class="row">
-        <div class="col s12 m6">
-          <p>Email: email@email.com</p>
-          <p>Phone: 6543 2130</p>
-          <p>Address: 123 Shan Road</p>
-        </div>
+<div class="container">
+  <div class="row">
+      <div class="col s12 m6" id="contactus">
+        <p>Email: mennstop@email.com</p>
+        <p>Phone: 6543 2130</p>
+        <p>Address: 123 Shan Road, Singapore</p>
+
+        <a href="#" class="social-btn">
+        <a href="https://www.facebook.com" id="icons" class="fa fa-facebook"></a>
+        <a href="https://twitter.com" id="icons" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com" id="icons" class="fa fa-instagram"></a>
+      </div>
+
 
   <div class="row">
         <div class="col s12 m6">
@@ -185,9 +193,7 @@
             </div>
             <button name="submit" class="btn contact-btn" type="submit" id="submit">Send</button><br/>
           </form>
-
-          <div class="col s12 m6">
-          </div>
       </div>
     </div>
   </div>
+</div>

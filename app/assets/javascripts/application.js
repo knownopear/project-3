@@ -45,6 +45,7 @@ $(document).on('turbolinks:load', function() {
       selected_date = new Date(date.select);
       console.log(selected_date);
       // $('.time_dropdown').prop( "disabled", false );
+
     }
   });
 

@@ -19,6 +19,13 @@ class BookingsController < ApplicationController
     render json: params
   end
 
+  def thanks
+    @user = User.new
+  end
+
+  def contactus
+    @user = User.new
+  end
 
   def create
     @total_amount = 0
