@@ -10,7 +10,6 @@ class BookingsController < ApplicationController
 
   end
 
-
   def services
     @all_services = Service.all.order(created_at: :asc)
   end
