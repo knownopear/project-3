@@ -72,13 +72,12 @@ td, th {
 }
 
 #pics {
-  // position:relative;
-  // background-image: image-url('massage.png');
-  // background-image: image-url('hair.png');
-  // background-image: image-url('shave.png');
-  // background-image: image-url('place.png');
   width: 100%;
-  height: 20em;
+  // height: 20em;
+}
+
+.img_div{
+  padding: 0 !important;
 }
 
 .footer-copyright {
