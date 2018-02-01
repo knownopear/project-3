@@ -1,4 +1,4 @@
-# Project 3:
+# Project 3 - MennStop
 
 Our company is developing a website with easy booking system catering to men with services that include massage, facial and haircut at one place, offering the convenience and relaxation which they want in their life.
 
@@ -48,7 +48,7 @@ Link: https://mennstop.herokuapp.com/
 * Importance of the ERD
 * Clear thinking
 * No-harm-in-trying
-* Communication is key
+* Communication is key; talking is not communication
 
 
 ---
