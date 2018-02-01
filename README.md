@@ -35,8 +35,11 @@ Link: https://mennstop.herokuapp.com/
 ---
 ## Project Team / Collaboration
 ![project github](https://user-images.githubusercontent.com/31798170/35668830-056ddf08-076e-11e8-802b-8fdcece496fe.jpg)
+---
 ![github branches](https://user-images.githubusercontent.com/31798170/35668880-3c9f09c0-076e-11e8-80ee-1fe11b2be6d1.jpg)
-![timeline_emjys](https://user-images.githubusercontent.com/31798170/35682650-5ec49744-079c-11e8-9ea7-3074fe5b1576.png)
+---
+![timeline_emjys](https://user-images.githubusercontent.com/31798170/35684501-ff70863a-07a1-11e8-8ef6-db24aa537582.png)
+---
 ![Speed-timeline](https://i.imgur.com/98iIGQj.png)
 ---
 ## Back-End Conclusions
@@ -51,6 +54,13 @@ Link: https://mennstop.herokuapp.com/
 * No-harm-in-trying
 * Communication is key; talking is not communication
 ---
-## Acknowledgments – Image Sources:
-* Christin Hume, Chris Knight, Christoffer Engström on Unsplash,
+## Front-End Learnings
+* Importance of proper planning with initial drafts to enable clearer understanding, development and execution to make the necessary revisions rather than unfocused, random changes.
+* Vital to involve team member and provide constant updates on status, issues encountered to avoid unnecessary rework.
+* Importance of time management to focus on the objectives and deliverables in a timely manner.
+---
+## Acknowledgments
+### Image Sources:
+* Christin Hume, Chris Knight, Christoffer Engström on Unsplash
 * Whitesession on Pixabay
+* WDI13 instructional team and classmates
