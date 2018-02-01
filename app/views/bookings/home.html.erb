@@ -4,11 +4,11 @@
 
     <div class="row center">
 
-      <%= form_for @booking do |booking_form| %>
+      <%= form_for @booking, remote: true do |booking_form| %>
       <%#= booking_form.text_field :time %>
       <div>
         <div class="input-field col s12 m6 white">
-          <%= booking_form.text_field :date, class: 'datepicker', id: 'date_selector', placeholder: 'Choose Your Dates' %>
+          <%= booking_form.text_field :date, class: 'datepicker', id: 'date_selector', placeholder: 'Choose Your Date' %>
           <!-- This is the datepicker in rails format -->
         </div>
 
@@ -36,7 +36,7 @@
             ["19:30PM", "18"],
             ["20:00PM", "19"],
             ["20:30PM", "20"]
-            ], { :class => 'time_selector', :id => 'time_selector' })
+            ]), {}, { :class => 'time_dropdown', :disabled => false } # disabled true to disable. fix the onset date disabled = false else true
             %>
           </div>
         </div>
@@ -69,11 +69,22 @@
             <% end %>
           </tbody>
         </table>
-
-        <%= booking_form.submit 'Proceed To payment', :class => 'btn waves-effect waves-light', :id => 'submit-btn' %>
+          <%= hidden_field_tag(:stripeToken) %>
+        <%= booking_form.submit 'Submit Booking and Pay', :class => 'btn waves-effect waves-light', :id => 'submit-btn' %>
         <%#= submit_tag("Proceed To Payment", :id=>"button", :class=>"btn waves-effect waves-light", :name=>"action") %>
         <% end %>
 
+        <%= form_tag charges_path do %>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+          </article>
+          <script src="https://checkout.stripe.com/checkout.js">
+          </script>
+        <% end %>
 
 
       </div>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/about', to: 'bookings#about'
   post '/about', to: 'bookings#about_post'
   post '/bookings/filter', to: 'bookings#filter'
-  get '/logout', to: 'pages#home'
+  get '/logout', to: 'bookings#home'
   get '/thanks', to: 'pages#thanks'
   resource :bookings
   resources :charges
