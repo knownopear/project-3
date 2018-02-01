@@ -1,6 +1,6 @@
 # Project 3:
 
-Our company is developing a website with easy booking system catering to men with services that include massage, facial and haircut at one place, offering the convenience and relaxation which they want in their life.
+Our group is developing a website with easy booking system catering to men with services that include massage, facial and haircut at one place, offering the convenience and relaxation which they want in their life.
 
 Link: https://mennstop.herokuapp.com/
 ---
@@ -39,6 +39,7 @@ Link: https://mennstop.herokuapp.com/
 
 ![timeline_emjys](https://user-images.githubusercontent.com/31798170/35682650-5ec49744-079c-11e8-9ea7-3074fe5b1576.png)
 ---
-## Acknowledgments – Image Sources:
-* Christin Hume, Chris Knight, Christoffer Engström on Unsplash,
+## Acknowledgments
+### Image Sources:
+* Christin Hume, Chris Knight, Christoffer Engström on Unsplash
 * Whitesession on Pixabay
