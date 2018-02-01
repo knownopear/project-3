@@ -54,7 +54,7 @@ Link: https://mennstop.herokuapp.com/
 * No-harm-in-trying
 * Communication is key; talking is not communication
 ---
-## Front-End Learnings
+## Front-End Project Learnings and Conclusion
 * Importance of proper planning with initial drafts to enable clearer understanding, development and execution to make the necessary revisions rather than unfocused, random changes.
 * Vital to involve team member and provide constant updates on status, issues encountered to avoid unnecessary rework.
 * Importance of time management to focus on the objectives and deliverables in a timely manner.
