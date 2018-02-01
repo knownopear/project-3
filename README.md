@@ -21,7 +21,7 @@ Link: https://mennstop.herokuapp.com/
 * Ruby version: 2.5.0, Ruby on Rails
 * CSS framework: Materialize
 * Gems: Devise, Faker, Pry, Sprockets, Stripe, Font-Awesome, jQuery-rails
-* Database Creation: Postico - MySQL
+* Database Creation: MySQL - Postico - DBeaver
 ---
 ## Deployment & Versioning
 * Github
@@ -31,11 +31,26 @@ Link: https://mennstop.herokuapp.com/
 * Email notification
 * User profile packages
 * Point system
-* Multiple therapists/service
+* Multiple therapists : service
 ---
 ## Project Team / Collaboration
 ![project github](https://user-images.githubusercontent.com/31798170/35668830-056ddf08-076e-11e8-802b-8fdcece496fe.jpg)
 ![github branches](https://user-images.githubusercontent.com/31798170/35668880-3c9f09c0-076e-11e8-80ee-1fe11b2be6d1.jpg)
+![Speed-timeline](https://i.imgur.com/z7o2OrJ.png | width=200)
+---
+## Back-End Conclusions
+### What I've Learnt
+* Every layer of looping increases difficulty exponentially
+* Good planning leads to clarity (..ERD)
+* Don't sidetrack from the MVP
+
+### Points I'd like to touch on
+* Importance of the ERD
+* Clear thinking
+* No-harm-in-trying
+* Communication is key
+
+
 ---
 ## Acknowledgments – Image Sources:
 * Christin Hume, Chris Knight, Christoffer Engström on Unsplash,
