@@ -52,7 +52,7 @@ class BookingsController < ApplicationController
     # end
 
 
-    redirect_to root_path
+    redirect_to thanks_path
   end
 
 
