@@ -59,7 +59,7 @@
             <tr>
               <td><%= service.name %></td>
               <td><%= service.description %></td>
-              <td><%= service.price %></td>
+              <td><%= service.price.to_i %></td>
               <td><%= service.therapist.name %></td>
               <td>
                 <input type="checkbox" name="booking[services_list][<%= service.id %>]" id="checkbox<%= service.id %>" class="service_checkbox"/>
@@ -120,29 +120,28 @@
 
 <section class="section section-light" id="pics">
     <div class="row">
-          <div class="col s12 m4 l2">
-            <%= image_tag("aroma.png", size: "320x210") %>
+          <div class="col s12 m3 img_div">
+            <%= image_tag("aroma_small.png", class: "responsive-img") %>
           </div>
 
-          <div class="col s12 m4 l2">
-            <%= image_tag("massage.png", size: "320x210") %>
+          <div class="col s12 m3 img_div">
+            <%= image_tag("massage_small.png", class: "responsive-img") %>
           </div>
 
-          <div class="col s12 m4 l2">
-            <%= image_tag("hair.png", size: "320x210") %>
+          <div class="col s12 m3 img_div">
+            <%= image_tag("hair_small.png", class: "responsive-img") %>
           </div>
 
-          <div class="col s12 m4 l2">
-            <%= image_tag("shave.png", size: "320x210") %>
+          <div class="col s12 m3 img_div">
+            <%= image_tag("shave_small.png", class: "responsive-img") %>
           </div>
 
-          <div class="row">
-            <div class="col s12 m6 l3" id="about-pic2"></div>
-            <%= image_tag("place.png", size: "1300x300") %>
+            <div class="col s12 img_div">
+            <%= image_tag("place.png", class: "responsive-img") %>
           </div>
     </div>
 
-</div>
+</section>
 
 
 <!-- ################# Contact Us ################# -->
