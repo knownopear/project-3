@@ -72,18 +72,13 @@ td, th {
 }
 
 #pics {
-  position:relative;
-  // background-image: url('../images/aroma.png');
-  // background-image: url('../images/massage.png');
-  // background-image: url('../images/hair.png');
-  // background-image: url('../images/shave.png');
-  // background-image: url('../images/place.png');
+  // position:relative;
+  // background-image: image-url('massage.png');
+  // background-image: image-url('hair.png');
+  // background-image: image-url('shave.png');
+  // background-image: image-url('place.png');
   width: 100%;
   height: 20em;
-}
-
-.form p {
-  text-align: center;
 }
 
 .footer-copyright {
