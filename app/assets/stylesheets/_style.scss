@@ -83,6 +83,10 @@ td, th {
   opacity: 0.3;
 }
 
+#about p {
+  line-height: 1em;
+}
+
 .img_div {
   padding: 0 !important;
 }
@@ -101,10 +105,10 @@ td, th {
 }
 
 // Thank you page
-#booking {
-  padding-top: 1em;
-  text-align: center;
-}
+// #booking {
+//   padding-top: 1em;
+//   text-align: center;
+// }
 
 #details {
   border: 1px solid gray;
