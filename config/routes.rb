@@ -4,10 +4,13 @@ Rails.application.routes.draw do
   get '/about', to: 'bookings#about'
   post '/about', to: 'bookings#about_post'
   post '/bookings/filter', to: 'bookings#filter'
-  get '/logout', to: 'pages#home'
-  get '/thanks', to: 'pages#thanks'
+  get '/logout', to: 'bookings#home'
+  get '/thanks', to: 'bookings#thanks'
+  get '/contactus', to: 'bookings#contactus'
+
   resource :bookings
   resources :charges
+
   devise_for :users,
   path: '',
   path_names: {

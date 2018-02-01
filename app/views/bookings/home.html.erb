@@ -8,14 +8,14 @@
       <%#= booking_form.text_field :time %>
       <div>
         <div class="input-field col s12 m6 white">
-          <%= booking_form.text_field :date, class: 'datepicker', id: 'date_selector', placeholder: 'Choose Your Dates' %>
+          <%= booking_form.text_field :date, class: 'datepicker', id: 'date_selector', placeholder: 'Select Date' %>
           <!-- This is the datepicker in rails format -->
         </div>
 
         <div class="input-field col s12 m6 white time_selector">
           <%= booking_form.select :time,
           options_for_select([
-            ["Choose Your Timeslot", "0"],
+            ["Select Timeslot", "0"],
             ["11:00AM", "1"],
             ["11:30AM", "2"],
             ["12:00PM", "3"],
@@ -46,7 +46,7 @@
         <table class="highlight bordered white" id="table">
           <thead>
             <tr>
-              <th>Service Name</th>
+              <th>Service</th>
               <th class="description">Description</th>
               <th class="price">Price(SGD)</th>
               <th>Therapist</th>
@@ -70,12 +70,9 @@
           </tbody>
         </table>
 
-        <%= booking_form.submit 'Proceed To payment', :class => 'btn waves-effect waves-light', :id => 'submit-btn' %>
+        <%= booking_form.submit 'Proceed To Pay', :class => 'btn waves-effect waves-light', :id => 'submit-btn' %>
         <%#= submit_tag("Proceed To Payment", :id=>"button", :class=>"btn waves-effect waves-light", :name=>"action") %>
         <% end %>
-
-
-
       </div>
 
   </div>
@@ -85,7 +82,7 @@
 <!-- ################# About ################# -->
 <section class="section section-light" id="about">
   <h3>About Us</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisiporibus ex, omnis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. dolor repellendus ratione in. Lorem ipsum dolor sit amet, consectetur adipisiporibus ex, omnis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. dolor repellendus ratione in.</p>
+    <p>Easy booking system catering to men with services that include massage, facial and haircut at one place, offering the convenience and relaxation which they want in their life.</p>
 
     <div class="row">
       <div class="col s12 m4">
@@ -121,19 +118,19 @@
 <section class="section section-light" id="pics">
     <div class="row">
           <div class="col s12 m3 img_div">
-            <%= image_tag("aroma_small.png", class: "responsive-img") %>
+            <%= image_tag("aroma.png", class: "responsive-img") %>
           </div>
 
           <div class="col s12 m3 img_div">
-            <%= image_tag("massage_small.png", class: "responsive-img") %>
+            <%= image_tag("massage.png", class: "responsive-img") %>
           </div>
 
           <div class="col s12 m3 img_div">
-            <%= image_tag("hair_small.png", class: "responsive-img") %>
+            <%= image_tag("hair.png", class: "responsive-img") %>
           </div>
 
           <div class="col s12 m3 img_div">
-            <%= image_tag("shave_small.png", class: "responsive-img") %>
+            <%= image_tag("shave.png", class: "responsive-img") %>
           </div>
 
             <div class="col s12 img_div">
@@ -146,12 +143,19 @@
 
 <!-- ################# Contact Us ################# -->
 
-    <div class="row">
-        <div class="col s12 m6">
-          <p>Email: email@email.com</p>
-          <p>Phone: 6543 2130</p>
-          <p>Address: 123 Shan Road</p>
-        </div>
+<div class="container">
+  <div class="row">
+      <div class="col s12 m6">
+        <p>Email: mennstop@email.com</p>
+        <p>Phone: 6543 2130</p>
+        <p>Address: 123 Shan Road, Singapore</p>
+
+        <a href="#" class="social-btn">
+        <a href="https://www.facebook.com" id="icons" class="fa fa-facebook"></a>
+        <a href="https://twitter.com" id="icons" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com" id="icons" class="fa fa-instagram"></a>
+      </div>
+
 
   <div class="row">
         <div class="col s12 m6">
@@ -174,9 +178,7 @@
             </div>
             <button name="submit" class="btn contact-btn" type="submit" id="submit">Send</button><br/>
           </form>
-
-          <div class="col s12 m6">
-          </div>
       </div>
     </div>
   </div>
+</div>

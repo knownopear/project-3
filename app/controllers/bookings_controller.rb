@@ -7,7 +7,6 @@ class BookingsController < ApplicationController
     @all_services = Service.all
     @booking = Booking.new
     @user = User.new
-
   end
 
   def services
@@ -18,6 +17,13 @@ class BookingsController < ApplicationController
     render json: params
   end
 
+  def thanks
+    @user = User.new
+  end
+
+  def contactus
+    @user = User.new
+  end
 
   def create
     services_list = params[:booking][:services_list]

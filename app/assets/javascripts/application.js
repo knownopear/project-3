@@ -32,7 +32,7 @@ $(document).on('turbolinks:load', function() {
     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
     draggable: true, // Choose whether you can drag to open on touch screens,
   });
-  
+
   $('.datepicker').pickadate({
     min: true,
     selectMonths: true, // Creates a dropdown to control month
@@ -44,20 +44,20 @@ $(document).on('turbolinks:load', function() {
     onSet: function(date) {
       selected_date = new Date(date.select);
       console.log(selected_date);
-      // Uncaught range error because onset detects all selections within pickadate interface, so if you click next month 
+      // Uncaught range error because onset detects all selections within pickadate interface, so if you click next month
       // there is no 'date' that you've selected, hence you cant run all the following functions
     }
   });
-  
+
   $('.time_selector').dropdown({
     // Forces drop-up menu, remove if not required
     belowOrigin: true
   }
 );
 
-$('.time_selector').change(function() {  
+$('.time_selector').change(function() {
   parsedData = {time : $('#booking_time').val(), date : selected_date}
-  
+
   $.ajax({
     url: '/bookings/filter',
     type: 'post',
@@ -65,8 +65,8 @@ $('.time_selector').change(function() {
     success: function(data) { // console.log(data); // data is @matched_booking (time = selected time, date = selected date)
       console.log(data);
       $('.service_checkbox').prop( "disabled", false );
-      
-      var date_time_matched = JSON.parse(data); // date_time_matched is array of objects where (date = selected date && time = selected time) 
+
+      var date_time_matched = JSON.parse(data); // date_time_matched is array of objects where (date = selected date && time = selected time)
       $(date_time_matched).each(function(index) {
         var checkbox_id = "checkbox" + (this.service_id).toString();
         $('#' + checkbox_id).prop( "disabled", true );
@@ -83,11 +83,22 @@ $('.time_selector').change(function() {
 // $(".service_checkbox").change(function(){
 //   if(this.checked) {
 //     console.log("This is checked");
-// 
+//
 //   }
 //   else if (!this.checked) {
 //     console.log("This is unchecked");
 //   }
 // });
+
+// function myMap() {
+// var mapProp= {
+//     center:new google.maps.LatLng(51.508742,-0.120850),
+//     zoom:5,
+// };
+// var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+// }
+//
+// <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBInAVZ7CwlS_NukRgc-vg5RzBE1pFaEp0&callback=initMap"
+// type="text/javascript"></script>
 
 });
