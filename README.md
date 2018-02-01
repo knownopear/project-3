@@ -21,7 +21,7 @@ Link: https://mennstop.herokuapp.com/
 * Ruby version: 2.5.0, Ruby on Rails
 * CSS framework: Materialize
 * Gems: Devise, Faker, Pry, Sprockets, Stripe, Font-Awesome, jQuery-rails
-* Database Creation: MySQL - Postico - DBeaver
+* Database Creation: PostgreSQL
 ---
 ## Deployment & Versioning
 * Github
