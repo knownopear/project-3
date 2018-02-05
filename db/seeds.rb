@@ -18,7 +18,7 @@ end
 Service.create(
   service_type: 1,
   name: "Signature Massage",
-  description: "A refreshing head and scalp massage including face acupressure and tension-releasing foot massage. Our specialty massage will leave your body rejuvenated from head to toe.",
+  description: "A refreshing head and scalp massage, face acupressure and tension-releasing foot massage to leave your body rejuvenated from head to toe.",
   price: 180,
   slots_taken: 2,
   therapist_id: Therapist.find(1).id
@@ -27,7 +27,7 @@ Service.create(
 Service.create(
   service_type: 2,
   name: "Deep Tissue Massage",
-  description: "Slow, deep pressure massage targets on stressed and tired muscles to unlock tension and relieve pain. An ideal pre or post workout massage to reduce injuries or recover faster.",
+  description: "An ideal pre or post workout massage targets on stressed and tired muscles to unlock tension and relieve pain.",
   price: 140,
   slots_taken: 2,
   therapist_id: Therapist.find(2).id

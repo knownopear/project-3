@@ -67,14 +67,6 @@ td, th {
   color:#666;
 }
 
-.icon-block {
-  padding: 0 15px;
-}
-
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
 #pics {
   width: 100%
 }
@@ -104,14 +96,27 @@ td, th {
   margin: 0.5em
 }
 
-// Thank you page
-// #booking {
-//   padding-top: 1em;
-//   text-align: center;
-// }
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
 
 #details {
   border: 1px solid gray;
+}
+
+
+#contactus p {
+  padding: 0;
+  margin: 0;
+}
+
+.openhrs {
+  padding-top: 1em;
 }
 
 .footer-copyright {
@@ -120,6 +125,9 @@ td, th {
   height: 2em;
   bottom: 0;
   text-align: center;
+}
+.page-scroll {
+  float: right;
 }
 
 @mixin border-radius($radius) {
