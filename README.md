@@ -16,9 +16,6 @@ The Day's Respite is a site that allows you to book spa packages quickly and fus
 
 ### Flowchart
 ![flowchart revised](https://user-images.githubusercontent.com/31798170/35548283-5c332d04-05b9-11e8-8200-b79b9bc44625.png)
-
-### Wireframe
-![wireframe](https://user-images.githubusercontent.com/31798170/35616686-f30d62e2-06b0-11e8-88d9-9c4509a3acaa.png)
 ---
 ## Acknowledgments:
 * [Prima](https://github.com/primaulia/) - Instructor of WDI-SG-13, guiding me along for this project
