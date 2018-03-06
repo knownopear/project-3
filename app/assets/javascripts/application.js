@@ -49,6 +49,11 @@ $(document).on('turbolinks:load', function() {
     }
   });
 
+  $(document).ready(function(){
+     $('.carousel').carousel();
+   });
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
+
   $('.time_selector').dropdown({
     // Forces drop-up menu, remove if not required
     belowOrigin: true

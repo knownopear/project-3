@@ -1,26 +1,23 @@
-body, html{
-  height:100%;
-  margin:0;
+body {
   font-size:16px;
-  font-family:"Lato", sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
 }
 
-nav ul a,
-nav .brand-logo {
-  color: #444;
+.brand-logo {
+  font-family: 'Pacifico', cursive;
 }
 
-p {
-  line-height: 1.5rem;
+
+.packageSelectionDiv {
+  // background-position:center;
+  // background-size:cover;
+  // background-repeat:no-repeat;
+  // background-image: image-url('abstract.png');
 }
 
-.backgrd {
-  position:relative;
-  opacity:0.70;
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-image: image-url('abstract.png');
+.packageSelectionTable {
+  opacity: 0.8;
 }
 
 td, th {
@@ -31,41 +28,54 @@ td, th {
   padding: 15px;
 }
 
-#table {
-  opacity: 0.8;
-}
-
 .description {
   width: 100%;
 }
 
-.side-nav, h4 {
-  color: black;
+.side-nav {
   padding: 1em;
   text-align: center;
-  margin-left: 0.3em;
-  line-height: 1em;
 }
 
-.btn {
-  background-color: #757575;
-  float: right;
+.submitBtn {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-.btn:hover {
-  background-color: #424242;
+.pkgCarouTitle {
+  font-family: 'Pacifico', cursive;
 }
 
-.section {
-  text-align:center;
-  padding:50px 80px;
-  width: 100%;
+.pkgCarouTopText {
+  padding-top: 50px;
 }
 
-.section-light {
-  background-color:#f4f4f4;
-  color:#666;
+.pkg1Carou {
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-image: image-url('aroma.png');
 }
+
+.pkg2Carou {
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-image: image-url('hair.png');
+}
+
+.pkg3Carou {
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-image: image-url('massage.png');
+}
+
+// .section {
+//   text-align:center;
+//   padding:50px 80px;
+//   width: 100%;
+//
 
 .icon-block {
   padding: 0 15px;
@@ -75,44 +85,6 @@ td, th {
   font-size: inherit;
 }
 
-#pics {
-  width: 100%
-}
-
-#about h3 {
-  opacity: 0.3;
-}
-
-#about p {
-  line-height: 1em;
-}
-
-.img_div {
-  padding: 0 !important;
-}
-
-#icons {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: gray;
-  color: #ffffff;
-  display: inline-block;
-  font-size: 17px;
-  line-height: 40px;
-  text-align: center;
-  margin: 0.5em
-}
-
-// Thank you page
-// #booking {
-//   padding-top: 1em;
-//   text-align: center;
-// }
-
-#details {
-  border: 1px solid gray;
-}
 
 .footer-copyright {
   position: relative;
@@ -122,10 +94,44 @@ td, th {
   text-align: center;
 }
 
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
-                 border: $radius;
+.aboutDiv {
+  padding-top: 60px;
+  min-height: 50vh;
+  background-color: white;
+}
+
+.aboutTitle {
+  font-family: 'Pacifico', cursive;
+  color: #e57373;
+}
+
+.aboutDescription {
+  color: #757575;
+}
+
+
+// For Checkboxes
+
+.checkboxCustom[type="checkbox"] + label:before{
+  border: 2px solid #e57373;
+  background: transparent;
+}
+.checkboxCustom[type="checkbox"]:checked + label:before{
+  border: 2px solid transparent;
+  border-bottom: 2px solid #e57373;
+  border-right: 2px solid #e57373;
+  background: transparent;
+}
+.checkboxCustom.filled-in[type="checkbox"] + label:after{
+  border: 2px solid #e57373;
+  background: transparent;
+}
+.checkboxCustom.filled-in[type="checkbox"]:checked + label:after{
+  background: #e57373;
+}
+.checkboxCustom.filled-in[type="checkbox"]:checked + label:before{
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }

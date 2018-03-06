@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Therapist Name
-10.times do |index|
+5.times do |index|
   Therapist.create(
     name: Faker::Name.first_name
   )
@@ -17,91 +17,45 @@ end
 # Service & Types
 Service.create(
   service_type: 1,
-  name: "Signature Massage",
-  description: "A refreshing head and scalp massage including face acupressure and tension-releasing foot massage. Our specialty massage will leave your body rejuvenated from head to toe.",
-  price: 180,
+  name: "The Day's Respite",
+  description: "Our most popular package, the light to medium pressured massage helps relieve stress, reduce pain, boost mood and promote relaxation.",
+  price: 120,
   slots_taken: 2,
   therapist_id: Therapist.find(1).id
 )
 
 Service.create(
   service_type: 2,
-  name: "Deep Tissue Massage",
-  description: "Slow, deep pressure massage targets on stressed and tired muscles to unlock tension and relieve pain. An ideal pre or post workout massage to reduce injuries or recover faster.",
-  price: 140,
+  name: "The Gentleman",
+  description: "We prepare you for the trials of a social event. We'll make you look as good as we make you feel.",
+  price: 110,
   slots_taken: 2,
   therapist_id: Therapist.find(2).id
 )
 
 Service.create(
   service_type: 3,
-  name: "Time Saver Massage",
-  description: "Gliding, kneading and pressure point movements concentrate on releasing tension in back, neck and shoulders. Ideal lunchtime stress relief or a quick stop on the way home from the office.",
-  price: 60,
+  name: "The Tenderizer",
+  description: "We focus on the deepest layers of muscle tissue, tendons and fascia, transforming your tight, aching and sore body into a relaxed one.",
+  price: 110,
   slots_taken: 2,
   therapist_id: Therapist.find(3).id
 )
 
 Service.create(
   service_type: 4,
-  name: "Gentleman's Shave & Facial",
-  description: "A precision shave with essential oil infused towel and customised facial which cleanses, hydrates and tones to effectively condition and address environmental exposure. Warm stones ease tension in neck and shoulders while leaving your face smooth and refreshed.",
-  price: 120,
-  slots_taken: 2,
+  name: "The 'Kick Back & Relax'",
+  description: "The longest package, we focus on both your physical and mental well-being. The movement is slower and the pressure is deeper and concentrated on areas of tension and pain. At the end of the treatment, you will have forgotten about the stresses of the day.",
+  price: 180,
+  slots_taken: 4,
   therapist_id: Therapist.find(4).id
 )
 
 Service.create(
   service_type: 5,
-  name: "Sensitive Skin Shave & Facial",
-  description: "Redness and inflammation are calmed using soothing, naturally derived extracts without clogging pores to leave skin purified and hydrated. Restores  your skin and leaves it healthy.",
-  price: 130,
-  slots_taken: 2,
-  therapist_id: Therapist.find(5).id
-)
-
-
-Service.create(
-  service_type: 6,
-  name: "Traditional Shave",
-  description: "Skin is prepared with pre-shave oil and lathered with hot shaving cream. Traditional straight razor with precision and mastery then a cold towel infused with lavender essential oil, finish with after-shave balm to hydrate the freshly shaven skin.",
-  price: 50,
-  slots_taken: 2,
-  therapist_id: Therapist.find(6).id
-)
-
-Service.create(
-  service_type: 7,
-  name: "Shampoo Blow Dry and Styling",
-  description: "Signature shampoo and condition, including a relaxing scalp massage ensures the hair is clean healthy and protected. Finish off with a blow dry and styling to leave you ready to go for the day ahead.",
-  price: 60,
-  slots_taken: 2,
-  therapist_id: Therapist.find(7).id
-)
-
-Service.create(
-  service_type: 8,
-  name: "Customised Scalp Treatment",
-  description: "Invigorating scalp massage utilizing a blend of essential oils to cleanse and relieve dry, itchy scalp. Continue with a hot towel and finish with rosemary shampoo, conditioner and hair styling of your choice.",
+  name: "The Busy Man",
+  description: "For the informed man, we take half an hour of your busy day to ensure that your muscles have relaxed, you feel refreshed, and that your tensions have melted away.",
   price: 80,
-  slots_taken: 2,
-  therapist_id: Therapist.find(8).id
-)
-
-Service.create(
-  service_type: 9,
-  name: "Therapeutic Mani-Pedicure",
-  description: "Relieve tired hands and legs with bamboo granule exfoliation and a massage targeting muscle tension and stress. A moisturizer with natural essential oils is used to help promote circulation and healing.",
-  price: 70,
-  slots_taken: 2,
-  therapist_id: Therapist.find(9).id
-)
-
-Service.create(
-  service_type: 10,
-  name: "Time Saver Manicure",
-  description: "Nail shaping, buffing, cuticle detailing and complete with an application of botanical lotion. Ideal for those on the go.",
-  price: 30,
-  slots_taken: 2,
-  therapist_id: Therapist.find(10).id
+  slots_taken: 1,
+  therapist_id: Therapist.find(5).id
 )
