@@ -1,13 +1,16 @@
-# Project 3 - MennStop
+# The Day's Respite - A Spa Experience Tailored for Men
 
-Our company is developing a website with easy booking system catering to men with services that include massage, facial and haircut at one place, offering the convenience and relaxation which they want in their life.
-
-Link: https://mennstop.herokuapp.com/
+Link to live site:
 ---
-## Work Flow
-### User Stories
-![userstories_finalised](https://user-images.githubusercontent.com/31798170/35610116-1a591bd6-069b-11e8-9054-46a22c62d891.png)
-
+The Day's Respite is a site that allows you to book spa packages quickly and fuss-free. It is for an imaginary spa company called The Day's Respite, and the packages that it has are tailored towards men. The design decisions have been made with busy, working men as the target audience of the site.
+---
+## Notes
+* The first iteration of this project was built by myself and another developer. However, I have continued with the project and changed it so that it is almost entirely my own (front & back end)
+---
+## Technologies
+* Ruby on Rails
+* MySQL
+---
 ### Entity-Relationship Diagram
 ![erd_finalised](https://user-images.githubusercontent.com/31798170/35610133-27a2b338-069b-11e8-9795-2b85691e832f.png)
 
@@ -17,40 +20,6 @@ Link: https://mennstop.herokuapp.com/
 ### Wireframe
 ![wireframe](https://user-images.githubusercontent.com/31798170/35616686-f30d62e2-06b0-11e8-88d9-9c4509a3acaa.png)
 ---
-## Built With / Technologies
-* Ruby version: 2.5.0, Ruby on Rails
-* CSS framework: Materialize
-* Gems: Devise, Faker, Pry, Sprockets, Stripe, Font-Awesome, jQuery-rails
-* Database Creation: MySQL - Postico - DBeaver
----
-## Deployment & Versioning
-* Github
-* Heroku
----
-## Scalable Areas
-* Email notification
-* User profile packages
-* Point system
-* Multiple therapists : service
----
-## Project Team / Collaboration
-![project github](https://user-images.githubusercontent.com/31798170/35668830-056ddf08-076e-11e8-802b-8fdcece496fe.jpg)
-![github branches](https://user-images.githubusercontent.com/31798170/35668880-3c9f09c0-076e-11e8-80ee-1fe11b2be6d1.jpg)
-![timeline_emjys](https://user-images.githubusercontent.com/31798170/35682650-5ec49744-079c-11e8-9ea7-3074fe5b1576.png)
-![Speed-timeline](https://i.imgur.com/98iIGQj.png)
----
-## Back-End Conclusions
-### What I've Learnt
-* Every layer of looping increases difficulty exponentially
-* Good planning leads to clarity (..ERD)
-* Don't sidetrack from the MVP
-
-### Points I'd like to touch on
-* Importance of the ERD
-* Clear thinking
-* No-harm-in-trying
-* Communication is key; talking is not communication
----
-## Acknowledgments – Image Sources:
-* Christin Hume, Chris Knight, Christoffer Engström on Unsplash,
-* Whitesession on Pixabay
+## Acknowledgments:
+* [Prima](https://github.com/primaulia/) - Instructor of WDI-SG-13, guiding me along for this project
+* [emjys](https://github.com/emjys/) - Some front end work during the group project phase
